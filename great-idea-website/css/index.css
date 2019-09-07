@@ -65,13 +65,37 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 
+/* for animation */
+@keyframes logoSlide {
+	from { 
+		margin-left: 100%;
+    	width: 200%; 
+	}
+	to { 
+		margin-left: 0%;
+    	width: 100%;
+	}
+  }
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
 header {
 	/* gets rid of the carriage return in between nav and div */
 	font-size: 0;
-	/* text-align: center; */
-	padding-top: 2%;
+	padding-top: 1rem;
 	width: 80%;
 	margin: 0 auto;
+	background: lightgray;
+	/* for fixed navbar */
+	overflow: hidden;
+	vertical-align: middle;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
 }
 
 header nav {
@@ -79,7 +103,7 @@ header nav {
 	width: 80%;
 	/* gets rid of the carriage returns in between all of the a tags */
 	font-size: 0;
-	vertical-align: middle;
+
 }
 
 header nav a {
@@ -91,11 +115,18 @@ header nav a {
 	color: gray;
 }
 
+header nav a:hover {
+	color: white;
+}
+
 header div {
 	display: inline-block;
 	vertical-align: middle;
 	width: 20%;
 	text-align: right;
+	overflow: hidden;
+	animation-name: logoSlide;
+	animation-duration: 3s;
 }
 
 .banner {
@@ -127,6 +158,11 @@ header div {
 	color: black;
 	display: inline-block;
 	margin-top: 1%;
+	background: none;
+}
+
+.banner div a:hover {
+	background: lightgray;
 }
 
 .banner div:nth-child(2n) {

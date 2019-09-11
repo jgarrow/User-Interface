@@ -64,3 +64,162 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Your code starts here! */
+
+/* for animation */
+@keyframes logoSlide {
+	from { 
+		margin-left: 100%;
+    	width: 200%; 
+	}
+	to { 
+		margin-left: 0%;
+    	width: 100%;
+	}
+  }
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	/* gets rid of the carriage return in between nav and div */
+	font-size: 0;
+	padding-top: 1rem;
+	width: 80%;
+	margin: 0 auto;
+	background: lightgray;
+	/* for fixed navbar */
+	overflow: hidden;
+	vertical-align: middle;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+header nav {
+	display: inline-block;
+	width: 80%;
+	/* gets rid of the carriage returns in between all of the a tags */
+	font-size: 0;
+
+}
+
+header nav a {
+	width: calc(100% / 6);
+	display: inline-block;
+	/* reverts back to initial font size so the links are visible again */
+	font-size: initial;
+	text-decoration: none;
+	color: gray;
+}
+
+header nav a:hover {
+	color: white;
+}
+
+header div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20%;
+	text-align: right;
+	overflow: hidden;
+	animation-name: logoSlide;
+	animation-duration: 3s;
+}
+
+.banner {
+	font-size: 0;
+	width: 80%;
+	margin: 0 auto;
+	padding: 6% 0;
+	border-bottom: 1px solid black;
+}
+
+.banner div {
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	width: 50%;
+	font-size: initial;
+	padding-left: 7%;
+	
+}
+
+.banner div h1 {
+	font-size: 85px;
+}
+
+.banner div a {
+	border: 1px solid black;
+	padding: 7px 40px;
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	margin-top: 1%;
+	background: none;
+}
+
+.banner div a:hover {
+	background: lightgray;
+}
+
+.banner div:nth-child(2n) {
+	text-align: right;
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.content {
+	font-size: 0;
+	width: 80%;
+	margin: 0 auto;
+	border-bottom: 1px solid black;
+}
+
+.content .row {
+	display: inline-block;
+	font-size: 0;
+	width: 100%;
+	padding: 4% 0;
+}
+
+.content .row div {
+	display: inline-block;
+	font-size: initial;
+	padding-right: 1rem;
+}
+
+.content .text-groups-2 div {
+	width: 50%;
+}
+
+.content .middle-img {
+	font-size: initial;
+	width: 100%;
+}
+
+.content .text-groups-3 div {
+	width: 33.3%;
+}
+
+/* .content .text-1 {
+	margin-right: 0.5%;
+}
+
+.content .middle {
+	margin: 0 0.5%;
+} */
+
+.contact {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 3%;
+}
+
+footer {
+	width: 80%;
+	margin: 3% auto 7%;
+	text-align: center;
+}
